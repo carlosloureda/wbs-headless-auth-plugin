@@ -79,14 +79,14 @@ function modify_password_reset_message( string $message, string $key, string $us
  * @param string  $blogname The site title.
  */
 function modify_new_user_notification_email( array $wp_new_user_notification_email, WP_User $user, string $blogname ) : array {
-    $sitename = $this->get_site_name();
+    $sitename = get_site_name();
     $key      = get_password_reset_key( $user );
 
     $wp_new_user_notification_email['subject'] = $sitename . ' - Sign Up';
 
-    $message = "Welcome! You have successfully signed up for a {$this->get_site_name()} account." . PHP_EOL . PHP_EOL;
+    $message = "Welcome! You have successfully signed up for a ". get_site_name(). " account." . PHP_EOL . PHP_EOL;
     $message .= 'You can set a password and sign into your new account here:' . PHP_EOL;
-    $message .= $this->get_set_password_url( $key, $user->user_login, true );
+    $message .= get_set_password_url( $key, $user->user_login, true );
 
     $wp_new_user_notification_email['message'] = $message;
 
