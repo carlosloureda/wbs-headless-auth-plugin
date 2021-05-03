@@ -1,5 +1,5 @@
 <?php
-
+define("FRONTEND_APP_URL", "");
 /**
 * Plugin Name: Webstantly plugin to change messages
 * Plugin URI: 
