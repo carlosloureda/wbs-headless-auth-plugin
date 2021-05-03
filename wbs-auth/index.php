@@ -1,5 +1,5 @@
 <?php
-define("FRONTEND_APP_URL", "");
+define("FRONTEND_APP_URL", "http://localhost:3000/");
 /**
 * Plugin Name: Webstantly plugin to change messages
 * Plugin URI: 
@@ -85,8 +85,9 @@ function modify_new_user_notification_email( array $wp_new_user_notification_ema
     $wp_new_user_notification_email['subject'] = $sitename . ' - Sign Up';
 
     $message = "Welcome! You have successfully signed up for a ". get_site_name(). " account." . PHP_EOL . PHP_EOL;
-    $message .= 'You can set a password and sign into your new account here:' . PHP_EOL;
-    $message .= get_set_password_url( $key, $user->user_login, true );
+    $message .= "Come and login to enjoy the app."
+    // $message .= 'You can set a password and sign into your new account here:' . PHP_EOL;
+    // $message .= get_set_password_url( $key, $user->user_login, true );
 
     $wp_new_user_notification_email['message'] = $message;
 
