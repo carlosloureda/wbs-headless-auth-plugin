@@ -85,7 +85,7 @@ function modify_new_user_notification_email( array $wp_new_user_notification_ema
     $wp_new_user_notification_email['subject'] = $sitename . ' - Sign Up';
 
     $message = "Welcome! You have successfully signed up for a ". get_site_name(). " account." . PHP_EOL . PHP_EOL;
-    $message .= "Come and login to enjoy the app."
+    $message .= "Come and login to enjoy the app.";
     // $message .= 'You can set a password and sign into your new account here:' . PHP_EOL;
     // $message .= get_set_password_url( $key, $user->user_login, true );
 
